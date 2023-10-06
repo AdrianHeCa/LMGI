@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+<body>
+    <form name="form">
+        <fieldset>
+            <legend>Rellenar</legend>
+            <div>
+                <div>
+                    <input type="radio" name="form_rellenar_idioma" id="form_rellenar_idioma_in">
+                    <label for="form_rellenar_idioma_in">Inglés</label>
+                </div>
+                <div>
+                    <input type="radio" name="form_rellenar_idioma" id="form_rellenar_idioma_al">
+                    <label for="form_rellenar_idioma_al">Alemán</label>
+                </div>
+                <div>
+                    <input type="radio" name="form_rellenar_idioma" id="form_rellenar_idioma_fr">
+                    <label for="form_rellenar_idioma_fr">Francés</label>
+                </div>
+            </div>
+            <div>
+                <select name="form_rellenar_puerto" id="form_rellenar_puerto">
+                    <option value="USB">USB</option>
+                    <option value="Micro USB">Micro USB</option>
+                    <option value="USB Type C">USB Type C</option>
+                </select>
+            </div>
+            <div>
+                <label for="form_rellenar_nombre">Nombre</label>
+                <input type="text" name="form_rellenar_nombre" id="form_rellenar_nombre">
+            </div>
+            <div>
+                <label for="form_rellenar_apellidos">Apellidos</label>
+                <input type="text" name="form_rellenar_apellidos" id="form_rellenar_apellidos">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            <div>
+                <select multiple name="form_preferencias_preferencia" id="form_preferencias_preferencia">
+                    <option value="hombres">Hombres</option>
+                    <option value="mujeres">Mujeres</option>
+                    <option value="ambos">Ambos</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="form_preferencias_género" id="form_preferencias_género_m">
+                    <label for="form_preferencias_género_m">Mujer</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="form_preferencias_género" id="form_preferencias_género_h">
+                    <label for="form_preferencias_género_h">Hombre</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="form_preferencias_género" id="form_preferencias_género_o">
+                    <label for="form_preferencias_género_o">Otro</label>
+                </div>
+            </div>
+            <div>
+                <label for="form_preferencias_fecha">Elija una fecha:</label>
+                <input type="date" name="form_preferencias_fecha" id="form_preferencias_fecha">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
