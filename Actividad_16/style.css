@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+article {
+    height: 350px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+article h1 {
+    font-size: 1.1rem;
+    margin: 5px 0 0 10px;
+}
+
+article p {
+    margin-left: 10px;
+}
+
+img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 2px solid fuchsia;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
