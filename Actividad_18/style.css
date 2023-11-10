@@ -1,0 +1,49 @@
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: white;
+    }
+
+    p::after {
+        content: 'blanco';
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: cyan;
+    }
+
+    p::after {
+        content: 'cian';
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: red;
+    }
+
+    p::after {
+        content: 'rojo';
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+
+    p::after {
+        content: 'amarillo';
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background-color: green;
+    }
+
+    p::after {
+        content: 'verde';
+    }
+}
