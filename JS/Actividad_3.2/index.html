@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.2</title>
+</head>
+<body>
+    <P id="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, nisi!</P>
+    <button onclick="aumentarTamañoFuente()">Aumentar tamaño</button>
+    <button onclick="disminuirTamañoFuente()">Disminuir tamaño</button>
+</body>
+<script>
+    var text = document.getElementById('texto')
+    function aumentarTamañoFuente() {
+        var tamañoActual = parseFloat(window.getComputedStyle(text, null).getPropertyValue('font-size'))
+        text.style.fontSize = (tamañoActual + 2) + 'px'
+    }
+    
+    function disminuirTamañoFuente() {
+        var tamañoActual = parseFloat(window.getComputedStyle(text, null).getPropertyValue('font-size'))
+        text.style.fontSize = (tamañoActual - 2) + 'px'
+    }
+</script>
+</html>
