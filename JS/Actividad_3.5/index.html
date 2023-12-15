@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.5</title>
+    <style>
+        .clase-h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Elemento</h1>
+    <button id="añadirClaseBtn">Añadir clase CSS</button>
+    <button id="quitarClaseBtn">Quitar clase CSS</button>
+    <script>
+        var h1 = document.getElementById('h1')
+        var añadirClaseBtn = document.getElementById('añadirClaseBtn')
+        añadirClaseBtn.addEventListener('click', añadirClase)
+        var quitarClaseBtn = document.getElementById('quitarClaseBtn')
+        quitarClaseBtn.addEventListener('click', quitarClase)
+
+        function añadirClase() {
+            h1.classList.add('clase-h1')
+        }
+
+        function quitarClase() {
+            h1.classList.remove('clase-h1')
+        }
+    </script>
+</body>
+</html>
