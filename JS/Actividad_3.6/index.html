@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.6</title>
+    <style>
+        .estilo-texto {
+            color: fuchsia;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem.</p>
+    <p>Lorem, ipsum.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, placeat.</p>
+    <script>
+        var textos = document.getElementsByTagName('p')
+
+        for (var i = 0; i < textos.length; i++) {
+            if (textos[i].textContent.length > 40) {
+                textos[i].classList.add('estilo-texto')
+            }
+            textos[i].addEventListener('click', alerta);
+        }
+        
+        function alerta() {
+            alert('Has clicado un texto')
+        }
+    </script>
+</body>
+</html>
