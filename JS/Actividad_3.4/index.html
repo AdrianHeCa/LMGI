@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.4</title>
+</head>
+<body>
+    <p id="texto" idioma="es">Albion online es un MMORPG no linear en el que construyes tu propia historia.</p>
+    <button id="traducirBtn">Traducir</button>
+    <button id="cambioColorBtn">Cambio color</button>
+    <script>
+        var texto = document.getElementById('texto')
+        var traducirBtn = document.getElementById('traducirBtn')
+        traducirBtn.addEventListener('click', traducir)
+        var cambioColorBtn = document.getElementById('cambioColorBtn')
+        cambioColorBtn.addEventListener('mouseover', cambiarColor)
+        
+        function traducir() {
+            if (texto.getAttribute('idioma') == 'es') {
+                texto.innerHTML = "Albion online is a non-lineal MMORPG in which you make your own story."
+                texto.setAttribute('idioma', 'en')
+            } else {
+                texto.innerHTML = "Albion online es un MMORPG no linear en el que construyes tu propia historia."
+                texto.setAttribute('idioma', 'es')
+            }
+        }
+
+        function cambiarColor() {
+            const colores = [
+                '#FF5733',
+                '#33FF57',
+                '#3366FF',
+                '#FF33E9',
+                '#FFFF33',
+                '#33FFFF',
+                '#FF3366',
+                '#33FFEC',
+                '#CC33FF',
+                '#FF3333'
+            ]
+            const indiceAleatorio = Math.floor(Math.random() * colores.length)
+
+            cambioColorBtn.style.backgroundColor = colores[indiceAleatorio]
+        }
+    </script>
+</body>
+</html>
