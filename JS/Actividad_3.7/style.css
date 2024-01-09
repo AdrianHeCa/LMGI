@@ -1,0 +1,394 @@
+:root {
+    --primaryColor: rgb(132, 0, 255);
+    --secondaryColor: rgb(42, 38, 44);
+    --terciaryColor: rgb(47, 42, 49);
+    --quartearyColor: rgb(28, 25, 30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    * {
+        font-size: 1.4rem;
+    }
+}
+
+/* Inicio de estilos genéricas */
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+/* Final de estilos genéricas */
+
+/* Inicio de navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+    padding: 5px 10px 5px 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+nav a {
+    font-size: large;
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px 20px 10px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: rgb(238, 189, 255);
+}
+
+#search {
+    width: 200px;
+    height: 30px;
+    border: 0;
+}
+
+.hamburger {
+    display: none;
+    font-weight: 900;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.menu-movil {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: var(--primaryColor);
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-movil.active {
+    display: block;
+}
+
+.menu-movil ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-movil li {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.menu-movil a {
+    display: block;
+    padding: 15px 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .links {
+        display: none;
+    }
+
+    #search {
+        height: 40px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #search {
+        display: none;
+    }
+}
+
+/* Final de navbar */
+
+/* Inicio de main */
+
+main {
+    background-color: var(--secondaryColor);
+    padding: 5% 7% 5% 7%;
+}
+
+/* Final de main */
+
+/* Inicio de section */
+
+section {
+    padding: 10px 0 5% 0;
+    border-bottom: 2px solid var(--primaryColor);
+}
+
+section h1 {
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 430px) {
+    section {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #sobre-nosotros img {
+        width: 300px;
+    }
+}
+
+/* Final de section */
+
+/* Inicio de cards */
+
+.cards h1 {
+    margin: 20px;
+}
+
+.cards h2 {
+    color: var(--primaryColor);
+    margin-bottom: 10px;
+}
+
+.cards {
+    justify-content: space-around;
+}
+
+.card {
+    background-color: var(--terciaryColor);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-servicios {
+    width: 230px;
+    height: 350px;
+}
+
+.card-portfolio {
+    width: 300px;
+    height: 450px;
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px 0 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid var(--primaryColor);
+    object-fit: cover;
+}
+
+.card-text {
+    margin: 20px;
+}
+
+.card-text p{
+    margin-bottom: 70px;
+}
+
+.card-text a{
+    color: var(--primaryColor);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.card-text a:hover{
+    color: rgb(176, 101, 255);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card-servicios {
+        width: 300px;
+        height: 400px;
+        margin: 20px 0 20px 0;
+    }
+
+    .card-portfolio {
+        width: 400px;
+        height: 550px;
+        margin: 20px 20px 20px 20px;
+    }
+}
+
+/* Final de cards */
+
+/* Inicio de contactanos */
+
+input, label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(176, 101, 255);
+}
+
+@media screen and (max-width: 430px) {
+    label {
+        text-align: start;
+    }
+}
+
+/* Final de contactanos */
+
+/* Inicio de footer */
+
+footer {
+    background-color: var(--quartearyColor);
+    padding: 2% 15% 0 15%;
+}
+
+footer > p {
+    padding: 30px;
+}
+
+.footer-sections-container {
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 250px;
+    margin: 20px 0 20px 0;
+}
+
+.footer-section > * {
+    color: rgb(200, 200, 200);
+}
+
+.footer-section h1 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section li {
+    list-style: none;
+}
+
+.footer-section a {
+    color: gray;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-section a:hover {
+    color: rgb(200, 200, 200);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 2% 5% 0 5%;
+    }
+
+    .footer-sections-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        padding: 2% 15% 0 15%;
+    }
+
+    footer * {
+        font-size: 0.9rem;
+    }
+
+    .footer-sections-container {
+        flex-direction: column;
+    }
+}
+
+/* Final de footer */
