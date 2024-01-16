@@ -3,9 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 3.7</title>
+    <title>Actividad 3.8</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <Header><h1>To-Do-List</h1></Header>
+    <main>
+        <div>
+            <div class="grupo-filtros">
+                <input type="radio" name="filtros" id="todas" checked>
+                <label for="todas">todas</label>
+                <input type="radio" name="filtros" id="activas">
+                <label for="activas">activas</label>
+                <input type="radio" name="filtros" id="completadas">
+                <label for="completadas">completadas</label>
+            </div>
+            <div class="input-area">
+                <input type="text" name="list-input" id="list-input">
+                <button type="button" id="añadir-btn">+</button>
+            </div>
+            <div class="lista">
+                <ul id="to-do-list">
+
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Elementos
+        const listInput = document.getElementById('list-input')
+        const añadirBtn = document.getElementById('añadir-btn')
+        const toDoList = document.getElementById('to-do-list')
+        const todasRadio = document.getElementById('todas')
+        const activasRadio = document.getElementById('activas')
+        const completadasRadio = document.getElementById('completadas')
+
+        // Añadir elementos a la lista
+        añadirBtn.addEventListener('click', function() {
+            const valorInput = listInput.value
+
+            if (valorInput.trim() !== '') {
+                const elementoLista = document.createElement('li')
+                elementoLista.classList.add("elemento-lista")
+
+                const paragrafo = document.createElement('p')
+                paragrafo.textContent = valorInput
+
+                const btnGroup = document.createElement('div')
+                btnGroup.classList.add("btn-group")
+                
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+
+                const removeBtn = document.createElement('button')
+                removeBtn.type = 'button'
+                removeBtn.classList.add("eliminar-btn")
+                removeBtn.textContent = 'Eliminar'
+
+                checkbox.addEventListener('change', function() {
+                    if (checkbox.checked) {
+                        elementoLista.classList.add('completado')
+                        aplicarFiltro()
+                    } else {
+                        elementoLista.classList.remove('completado')
+                        aplicarFiltro()
+                    }
+                })
+
+                removeBtn.addEventListener('click', function() {
+                    elementoLista.remove()
+                })
+
+                elementoLista.appendChild(paragrafo)
+                btnGroup.appendChild(checkbox)
+                btnGroup.appendChild(removeBtn)
+                elementoLista.appendChild(btnGroup)
+
+
+                toDoList.appendChild(elementoLista)
+
+                listInput.value = ''
+                aplicarFiltro()
+            }
+        })
+
+        // Aplicar filtros
+        todasRadio.addEventListener('change', aplicarFiltro)
+        activasRadio.addEventListener('change', aplicarFiltro)
+        completadasRadio.addEventListener('change', aplicarFiltro)
+
+        function aplicarFiltro() {
+            const elementosLista = toDoList.getElementsByTagName('li')
+
+            for (const elemento of elementosLista) {
+                const completado = elemento.classList.contains('completado')
+
+                if (todasRadio.checked) {
+                    elemento.style.display = 'flex'
+                } else if (activasRadio.checked && !completado) {
+                    elemento.style.display = 'flex'
+                } else if (completadasRadio.checked && completado) {
+                    elemento.style.display = 'flex'
+                } else {
+                    elemento.style.display = 'none'
+                }
+            }
+        }
+    </script>
 </body>
 </html>
