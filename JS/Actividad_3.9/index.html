@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.9</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <Header><h1>Bloc</h1></Header>
+    <main>
+        <article>
+            <h1>Mi primera vez tocando CÉSPED</h1>
+            <p>
+                ¡Saludos, camaradas otakus y gamers! Hoy, les contaré una épica aventura que tuve recientemente: salir a tocar césped por primera vez en el patio de mi vecino. Como sabrán, mi hábitat natural suele ser mi cuarto, rodeado de figuras de anime y pantallas parpadeantes. Pero esta vez, la llamada del césped fue irresistible.
+            </p>
+            <p>
+                Todo comenzó un soleado sábado por la tarde. Mis auriculares aún resonaban con la última banda sonora de un juego épico, pero algo en el aire me atrajo hacia la ventana. Al asomarme, vi el césped del vecino, ese vasto territorio verde que siempre había ignorado. Decidí que era el momento perfecto para una nueva aventura.
+            </p>
+            <p>
+                Con valentía, abandoné mi guarida gamer y me aventuré al mundo exterior. Al pisar el césped, experimenté una sensación extraña y suave bajo mis pies. Era como si estuviera entrando en un nivel de juego diferente, uno lleno de texturas naturales y colores vibrantes.
+            </p>
+            <p>
+                Mientras caminaba por el verde manto, me di cuenta de cosas que nunca había notado desde mi ventana. Insectos diminutos que correteaban a mi alrededor, el susurro del viento entre las hojas de los árboles y el canto de los pájaros en lo alto. Era como si hubiera descubierto un nuevo mundo que siempre estuvo ahí, pero que nunca había apreciado.
+            </p>
+            <p>
+                Decidí sentarme y absorber la experiencia. Mientras lo hacía, reflexioné sobre cómo la vida real también podía ser fascinante. El césped se convirtió en mi alfombra natural de meditación, lejos de las explosiones virtuales y las batallas en la pantalla.
+            </p>
+            <p>
+                Después de un rato, regresé a mi cueva gamer con una nueva apreciación por el mundo exterior. Mis manos, acostumbradas al teclado y al control, ahora también sabían lo que era acariciar el césped. Aunque mi corazón siempre pertenecerá a los mundos virtuales, ahora sé que hay aventuras reales esperando afuera.
+            </p>
+            <p>
+                En conclusión, queridos otakus y gamers, no subestimen el poder de salir y tocar césped de vez en cuando. Podría sorprenderlos y ofrecerles una perspectiva fresca sobre la realidad. ¡Hasta la próxima aventura, mis compañeros de joystick y teclado!
+            </p>
+            <section>
+                <h1>Comentarios</h1>
+                <div>
+                    <textarea name="input-comentario" id="input-comentario" rows="7"></textarea>
+                    <button type="button" class="añadir-comentario-btn" id="añadir-comentario-btn" >Añadir Comentario</button>
+                </div>
+                <div class="alternar-comentarios" id="alternar-comentarios">▲</div>
+                <div class="comentarios" id="comentarios">
+                    <div class="comentario" id="comentario">
+                        <p>Terrible, oremos.</p>
+                        <button type="button" class="borrar-comentario-btn" id="borrar-comentario-btn">X</button>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script>
+        $("#añadir-comentario-btn").click(function () {
+            var nuevoComentario = $("#input-comentario").val();
+            if (nuevoComentario.trim() !== "") {
+                nuevoComentario = nuevoComentario.replace(/\n/g, "<br>");
+                $("#comentarios").append("<div class='comentario' id='comentario'><p>" + nuevoComentario + "</p><button type='button' class='borrar-comentario-btn' id='borrar-comentario-btn'>X</button></div>");
+                $("#input-comentario").val("");
+            }
+        });
+
+        $("#comentarios").on("click", "#borrar-comentario-btn", function () {
+            $(this).closest("#comentario").remove();
+        });
+
+        $("#alternar-comentarios").click(function () {
+            $("#comentarios").slideToggle();
+            $(this).text(function (i, text) {
+                return text === "▲" ? "▼" : "▲";
+            });
+        });
+    </script>
+</body>
+</html>
