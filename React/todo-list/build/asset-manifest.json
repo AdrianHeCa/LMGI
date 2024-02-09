@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b1d7ec7b.css",
-    "main.js": "/static/js/main.49e4b725.js",
-    "static/js/592.ff97074e.chunk.js": "/static/js/592.ff97074e.chunk.js",
-    "index.html": "/index.html",
-    "main.b1d7ec7b.css.map": "/static/css/main.b1d7ec7b.css.map",
-    "main.49e4b725.js.map": "/static/js/main.49e4b725.js.map",
-    "592.ff97074e.chunk.js.map": "/static/js/592.ff97074e.chunk.js.map"
+    "main.css": "adrianheca.github.io/LMGI/React/todo-list/build/static/css/main.b1d7ec7b.css",
+    "main.js": "adrianheca.github.io/LMGI/React/todo-list/build/static/js/main.8de4a9f1.js",
+    "static/js/592.ff97074e.chunk.js": "adrianheca.github.io/LMGI/React/todo-list/build/static/js/592.ff97074e.chunk.js",
+    "index.html": "adrianheca.github.io/LMGI/React/todo-list/build/index.html",
+    "main.b1d7ec7b.css.map": "adrianheca.github.io/LMGI/React/todo-list/build/static/css/main.b1d7ec7b.css.map",
+    "main.8de4a9f1.js.map": "adrianheca.github.io/LMGI/React/todo-list/build/static/js/main.8de4a9f1.js.map",
+    "592.ff97074e.chunk.js.map": "adrianheca.github.io/LMGI/React/todo-list/build/static/js/592.ff97074e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1d7ec7b.css",
-    "static/js/main.49e4b725.js"
+    "static/js/main.8de4a9f1.js"
   ]
 }
