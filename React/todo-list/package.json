@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set PUBLIC_URL=adrianheca.github.io/LMGI/React/todo-list/build&&react-scripts build",
+    "build": "set PUBLIC_URL=https://adrianheca.github.io/LMGI/React/todo-list/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
