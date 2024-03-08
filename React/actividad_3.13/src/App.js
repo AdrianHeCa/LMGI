@@ -15,10 +15,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark border-bottom border-2 border-info">
           <div className="container">
             <Link className="navbar-brand" to="/LMGI/React/actividad_3.13/build/">Inicio</Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link className="nav-link" to="/LMGI/React/actividad_3.13/build/puntos-de-interes">Puntos de Interés</Link>
@@ -36,7 +33,7 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="container col-8 text-light shadow p-4">
+        <div className="container col text-light shadow p-4">
           <Routes>
             <Route path="/LMGI/React/actividad_3.13/build/" element={<Inicio/>} />
             <Route path="/LMGI/React/actividad_3.13/build/puntos-de-interes" element={<PuntosDeInteres/>} />
