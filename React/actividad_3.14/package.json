@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set PUBLIC_URL=https://adrianheca.github.io/LMGI/React/actividad_3.13/build&&react-scripts build",
+    "build": "set PUBLIC_URL=https://adrianheca.github.io/LMGI/React/actividad_3.14/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
