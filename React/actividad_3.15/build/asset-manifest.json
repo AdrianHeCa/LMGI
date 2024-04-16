@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/css/main.cbc512fe.css",
+    "main.js": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/js/main.aec3b6f6.js",
+    "static/js/453.dd8a6076.chunk.js": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/js/453.dd8a6076.chunk.js",
+    "index.html": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/index.html",
+    "main.cbc512fe.css.map": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/css/main.cbc512fe.css.map",
+    "main.aec3b6f6.js.map": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/js/main.aec3b6f6.js.map",
+    "453.dd8a6076.chunk.js.map": "https://adrianheca.github.io/LMGI/React/actividad_3.15/build/static/js/453.dd8a6076.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbc512fe.css",
+    "static/js/main.aec3b6f6.js"
+  ]
+}
