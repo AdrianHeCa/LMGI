@@ -1,0 +1,40 @@
+<%- include('layout', {title: 'Detalles de la comanda'}) %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <h1>Detalles de la comanda</h1>
+            <div>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Id:</h2>
+                    <h3><%= comanda.id_comanda %></h3>
+                </div>
+                <h2 class="text-secondary">Usuario relacionado:</h2>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Id:</h2>
+                    <h3><%= comanda.id_usuario %></h3>
+                </div>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Nombre:</h2>
+                    <h3><%= comanda.nombre_usuario %></h3>
+                </div>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Email:</h2>
+                    <h3><%= comanda.email %></h3>
+                </div>
+                <h2 class="text-secondary">Producto relacionado:</h2>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Id:</h2>
+                    <h3><%= comanda.id_producto %></h3>
+                </div>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Nombre:</h2>
+                    <h3><%= comanda.nombre_producto %></h3>
+                </div>
+                <div class='d-flex align-items-baseline'>
+                    <h2 class='pe-5'>Precio:</h2>
+                    <h3><%= comanda.precio %></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

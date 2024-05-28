@@ -1,0 +1,41 @@
+<%- include('layout', {title: 'Comandas'}) %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>Comandas</h1>
+                <a class="btn btn-primary" href="/comanda" role="button">Añadir comanda</a>
+            </div>
+            <table class="table table-dark table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Id Usuario</th>
+                        <th>Nombre Usuario</th>
+                        <th>Email Usuario</th>
+                        <th>Id Producto</th>
+                        <th>Nombre Producto</th>
+                        <th>Precio Producto</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% comandas.forEach(comanda => { %>
+                        <tr>
+                        <td><%= comanda.id_comanda %></td>
+                        <td><%= comanda.id_usuario %></td>
+                        <td><%= comanda.nombre_usuario %></td>
+                        <td><%= comanda.email %></td>
+                        <td><%= comanda.id_producto %></td>
+                        <td><%= comanda.nombre_producto %></td>
+                        <td><%= comanda.precio %></td>
+                        <td>
+                            <a class="btn btn-primary" href="/comanda?id=<%= comanda.id_comanda %>" role="button">Ver</a>
+                        </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
