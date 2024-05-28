@@ -1,0 +1,32 @@
+<%- include('layout', {title: 'Editar comanda'}) %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <h1>Editar comanda</h1>
+            <form action="/comanda/editar" method="post">
+                <input type="hidden" name="id" value="<%= comanda.id_comanda %>">
+                <div class="mb-3">
+                    <label for="idUsuario" class="form-label">Usuario</label>
+                    <select class="form-select" name="idUsuario" id="idUsuario" required>
+                        <option value="">Selecciona un usuario</option>
+                        <% usuarios.forEach(usuario => { %>
+                            <option value="<%= usuario.id %>" <%= usuario.id === comanda.id_usuario ? 'selected' : '' %>><%= usuario.nombre %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="idProducto" class="form-label">Producto</label>
+                    <select class="form-select" name="idProducto" id="idProducto" required>
+                        <option value="">Selecciona un producto</option>
+                        <% productos.forEach(producto => { %>
+                            <option value="<%= producto.id %>" <%= producto.id === comanda.id_producto ? 'selected' : '' %>><%= producto.nombre %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

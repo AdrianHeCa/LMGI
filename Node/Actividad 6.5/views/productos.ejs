@@ -1,0 +1,34 @@
+<%- include('layout', {title: 'Productos'}) %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>Productos</h1>
+                <a class="btn btn-primary" href="/producto" role="button">Añadir producto</a>
+            </div>
+            <table class="table table-dark table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% productos.forEach(producto => { %>
+                        <tr>
+                        <td><%= producto.id %></td>
+                        <td><%= producto.nombre %></td>
+                        <td><%= producto.precio %></td>
+                        <td class="text-end">
+                            <a class="btn btn-primary" href="/producto?id=<%= producto.id %>" role="button">Ver</a>
+                            <a class="btn btn-primary" href="/producto/editar?id=<%= producto.id %>" role="button">Editar</a>
+                        </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
